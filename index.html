@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web - CI/CD Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #3E0014; /* RUSTIC RED - Fondo oscuro */
+            color: #E77291; /* DEEP BLUSH - Texto principal */
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(90, 0, 44, 0.85); /* TYRIAN PURPLE semitransparente */
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #AC1634; /* Borde CARDINAL */
+            box-shadow: 0 10px 30px rgba(62, 0, 20, 0.5); /* Sombra RUSTIC RED */
+            backdrop-filter: blur(5px);
+        }
+        h1 { 
+            margin-bottom: 20px;
+            color: #E77291; /* DEEP BLUSH */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(62, 0, 20, 0.7); /* Sombra RUSTIC RED */
+        }
+        p {
+            color: #E77291; /* DEEP BLUSH */
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #AC1634; /* CARDINAL */
+            color: #FFFFFF;
+            padding: 12px 30px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border: 2px solid #E77291; /* Borde DEEP BLUSH */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .badge:hover {
+            background-color: #7A002B; /* BURGUNDY */
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(122, 0, 43, 0.4); /* Sombra BURGUNDY */
+        }
+        .ci-cd-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(171, 22, 52, 0.2); 
+            border-radius: 10px;
+        }
+        .details-title {
+            color: #FFFFFF; /* Blanco para contraste */
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .details-text {
+            color: #E77291; /* DEEP BLUSH */
+            font-size: 0.95em;
+        }
+        .color-accent {
+            color: #AC1634; /* CARDINAL para acentos */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Despliegue Automático Exitoso</h1>
+        <p>Esta página fue desplegada automáticamente usando <span class="color-accent">GitHub Actions</span> y <span class="color-accent">Surge.sh</span></p>
+        <div class="badge">CI/CD Funcionando</div>
+        
+        <div class="ci-cd-details">
+            <div class="details-title">Despliegue Continuo</div>
+            <div class="details-text">
+                Cada cambio en el repositorio activa automáticamente el proceso de construcción y despliegue.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
