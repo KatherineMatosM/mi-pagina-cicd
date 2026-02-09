@@ -1,4 +1,4 @@
-name: Mi Pagina CI/CD
+name: Deploy to Surge
 
 on:
   push:
@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build-and-deploy:
+    # En qué máquina virtual se ejecutará
     runs-on: ubuntu-latest
     
     steps:
@@ -21,7 +22,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
       
       - name: Install Surge
         run: npm install --global surge
@@ -30,7 +30,6 @@ jobs:
         run: |
           surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
         
-      # 5. Notificación opcional en consola
       - name: Deployment Status
         run: |
           echo "¡Despliegue completado con éxito!"
